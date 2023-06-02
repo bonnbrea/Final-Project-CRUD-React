@@ -1,0 +1,46 @@
+.title{
+   color: rgb(0, 0, 0);
+    border-style: double;
+    justify-content: center;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    display: flex;
+}
+
+
+.nav {
+   background-color: rgba(200, 130, 80, 0.798);
+   color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 15px;
+   }
+   
+   
+   .nav ul {
+     padding:0;
+     margin:0;
+     list-style:none;
+     display:flex;
+     gap: 1rem;
+   }
+   
+   .nav a {
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     padding: .25rem;
+   }
+   
+   
+   .nav li:hover {
+     background-color: lightgray;
+   }
+
+  .subtitle{
+    background-color: azure;
+  }
