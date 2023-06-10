@@ -6,7 +6,7 @@ export default function Membershipform () {
     const [name, setName] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault();                           
     alert(`Thank you for joining our email club!`);
   }
 

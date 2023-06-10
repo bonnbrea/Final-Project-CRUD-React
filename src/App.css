@@ -12,29 +12,23 @@
 .nav {
    background-color: rgba(200, 130, 80, 0.798);
    color: black;
+   list-style-type: none;
    display: flex;
    justify-content: center;
-   align-items: center;
-   padding: 15px;
-   }
+   padding: 20px;
+   gap: 1rem;
    
-   
-   .nav ul {
-     padding:0;
-     margin:0;
-     list-style:none;
-     display:flex;
-     gap: 1rem;
    }
+  
    
-   .nav a {
-     color: rgb(255, 255, 255);
-     text-decoration: none;
-     height: 100%;
-     display: flex;
-     align-items: center;
-     padding: .25rem;
-   }
+  .nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+  }
    
    
    .nav li:hover {
