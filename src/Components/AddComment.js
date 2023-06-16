@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react';
-let initialComments=[]                     //data is stored from comments in this array
+
+let initialComments= [];
+
+
   function AddComment() {
     let [comment,setComment] = useState("");
     const [comments, setComments] =useState(initialComments);
@@ -9,6 +12,9 @@ let initialComments=[]                     //data is stored from comments in thi
     setComments([...comments, comment]); 
     
   }
+
+
+
 
   return (
     <form onSubmit={handleSubmit}>

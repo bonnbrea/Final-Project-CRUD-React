@@ -11,10 +11,10 @@ import {
   Link,
   useRouteMatch
 } from 'react-router-dom';
-
+// used router in the function app instead of the switch I used before
  function App() {
   return (
-    <Router>
+    <Router>                                        
       <div>
         <ul className='nav'>
           <li>

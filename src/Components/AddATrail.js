@@ -3,6 +3,24 @@ import React, { useState } from 'react';
 function AddATrail({ setTrails }) {
   let [trailObj, setTrailObj] = useState({});
 
+// POST fetch call for posting new trails
+  let addTrailData=() => {
+    fetch('https://647149046a9370d5a41a4bb4.mockapi.io/trails', {
+          method:'POST', 
+          headers: {'content-type':'application/json'},
+          body: JSON.stringify(trailObj)
+      }).then(response => {
+return (response.json())
+      })
+      .then(trailsResponse => {
+        console.log (trailsResponse);
+          }).catch (res => {
+          })
+        }
+
+
+
+
   const handleChange = e => {
     let name = e.target.name;
     let value = e.target.value;
@@ -12,7 +30,10 @@ function AddATrail({ setTrails }) {
   const handleSubmit = e => {
     e.preventDefault();
     setTrails(prev => [...prev, trailObj]);
+    addTrailData();     // call in POST
   };
+
+
 
   return (
     <div className='center'>
@@ -48,7 +69,9 @@ function AddATrail({ setTrails }) {
           placeholder="Rate"
         />
         <button type="submit">Add a Trail!</button>
+        
       </form>
+      
     </div>
   );
 }

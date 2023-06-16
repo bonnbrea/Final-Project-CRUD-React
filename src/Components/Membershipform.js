@@ -10,6 +10,8 @@ export default function Membershipform () {
     alert(`Thank you for joining our email club!`);
   }
 
+
+
   return (
     <div className="center">
     <form onSubmit={handleSubmit}>
