@@ -1,6 +1,15 @@
 import AddComment from './AddComment';
 import React from 'react';
 import LikeButton from './LikeButton';
+
+
+import Card from 'react-bootstrap/Card';
+
+
+
+
+
+
 function TrailReview({ trails, setTrails }) {
 
 
@@ -33,14 +42,15 @@ return (response.json())
         );
       });
     }
-    
+    // react-bootstrap styling with cards for each trail
     return (
-      <div key={i}>
-        <h1>{trail.name}</h1>
+      <Card key={i}>
+        <Card.Header>{trail.name}</Card.Header>                  
+        <Card.Body>
         <img style={{ width: '300px' }} src={trail.image} />
-        <h3>Location: {trail.location}</h3>
-        <h3>Distance: {trail.distance}</h3>
-        <h3>Rating: {trail.rate}</h3>
+        <Card.Text>Location: {trail.location}</Card.Text>
+        <Card.Text>Distance: {trail.distance}</Card.Text>
+        <Card.Text>Rating: {trail.rate}</Card.Text>
         
         {trails.comments ? { comments } : null}
         
@@ -52,8 +62,8 @@ return (response.json())
   
 
         <button onClick= {() => {(deleteTrail(i+1))}}>Delete Trail</button>
-
-      </div>
+        </Card.Body>
+      </Card>
     );
   });
 
